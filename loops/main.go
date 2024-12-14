@@ -3,7 +3,11 @@ package main
 import "fmt"
 
 func sheeps() {
-	for i := 0; i <= 10; i++ {
+	for i := 1; i <= 10; i++ {
+		if i == 1 {
+			fmt.Printf("%d sheep\n", i)
+			continue
+		}
 		fmt.Printf("%d sheeps\n", i)
 	}
 
