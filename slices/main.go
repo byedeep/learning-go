@@ -23,4 +23,10 @@ func main() {
 	Slice[1] = 7
 	Slice[2] = 8
 	fmt.Println(Slice)
+
+	a := "- van gogh"
+
+	Slice1 = append(Slice1, a)
+
+	fmt.Println(Slice1)
 }
