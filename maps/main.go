@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 
@@ -14,6 +16,7 @@ func main() {
 	for key, value := range Ages {
 		fmt.Println(key, value)
 	}
+	fmt.Println("")
 
 	fmt.Printf("The age of Walter white is %d \n", Ages["Walter"])
 
@@ -24,5 +27,29 @@ func main() {
 		fmt.Println("Value exists")
 	} else {
 		fmt.Println("This doesn't exist")
+	}
+
+	ShoppingList := make(map[string]map[string]int)
+
+	VegetableList := map[string]int{
+		"Broccoli":    2,
+		"Cauliflower": 3,
+		"Carrot":      2,
+	}
+
+	FruitList := map[string]int{
+		"Mango": 2,
+		"Apple": 1,
+	}
+	ShoppingList["Vegetables"] = VegetableList
+	ShoppingList["Fruits"] = FruitList
+
+	fmt.Println("")
+	fmt.Println("Shopping list")
+	fmt.Println("")
+
+	for value := range ShoppingList {
+		fmt.Println("Category", value)
+		fmt.Println("Category details", ShoppingList[value])
 	}
 }
